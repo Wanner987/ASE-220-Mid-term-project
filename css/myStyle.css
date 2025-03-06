@@ -547,7 +547,8 @@ input,
 select,
 optgroup,
 textarea {
-    font-family: "Noto Sans", serif;
+    font-family: "Noto Sans", sans-serif;
+    color: pink;
 }
 
 .site-title a {
@@ -559,5 +560,5 @@ textarea {
 }
 
 img:is([sizes="auto" i], [sizes^="auto," i]) {
-    contain-intrinsic-size: 3000px 1500px
+            contain-intrinsic-size: 3000px 1500px
 }
