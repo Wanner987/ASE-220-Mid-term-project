@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr-FR">
+<html lang="en">
 
 <head>
     <title>cool stuff</title>
@@ -11,13 +11,6 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 
-    <link rel='dns-prefetch' href='//www.googletagmanager.com' />
-    <link rel='stylesheet' id='wp-block-library-css'
-        href='https://iki-bir.com/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' media='all' />
-    
-    <style id='global-styles-inline-css'>
-        
-    </style>
     <link rel='stylesheet' id='ub-extension-style-css-css'
         href='https://iki-bir.com/wp-content/plugins/ultimate-blocks/src/extensions/style.css?ver=6.7.2' media='all' />
     <link rel='stylesheet' id='contact-form-7-css'
@@ -39,35 +32,7 @@
     <script src="https://iki-bir.com/wp-content/themes/ideal-magazine/assets/js/custom.min.js?ver=1"
         id="ideal-magazine-custom-script-js"></script>
 
-    <!-- Extrait de code de la balise Google (gtag.js) ajouté par Site Kit -->
 
-    <!-- Extrait Google Analytics ajouté par Site Kit -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=GT-KTPK9RNG" id="google_gtagjs-js" async></script>
-    <script id="google_gtagjs-js-after">
-        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
-        gtag("set", "linker", { "domains": ["iki-bir.com"] });
-        gtag("js", new Date());
-        gtag("set", "developer_id.dZTNiMT", true);
-        gtag("config", "GT-KTPK9RNG");
-        window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify({ name, data }); if (!!window._googlesitekit.throttledEvents[key]) { return; } window._googlesitekit.throttledEvents[key] = true; setTimeout(() => { delete window._googlesitekit.throttledEvents[key]; }, 5); gtag("event", name, { ...data, event_source: "site-kit" }); }
-    </script>
-
-    <!-- Extrait de code de la balise Google de fin (gtag.js) ajouté par Site Kit -->
-
-    <style></style>
-
-    <meta name="generator" content="Site Kit by Google 1.147.0" />
-    <style type="text/css" id="breadcrumb-trail-css">
-            .breadcrumbs ul li::after {
-            content: "/";
-        }
-    </style>
-    <style type="text/css">
-        .site-title a,
-        .site-description {
-            color: #ffffff;
-        }
-    </style>
     <link rel="icon" href="https://iki-bir.com/wp-content/uploads/2024/12/cropped-icone-32x32.webp" sizes="32x32" />
     <link rel="icon" href="https://iki-bir.com/wp-content/uploads/2024/12/cropped-icone-192x192.webp" sizes="192x192" />
     <link rel="apple-touch-icon" href="https://iki-bir.com/wp-content/uploads/2024/12/cropped-icone-180x180.webp" />
@@ -80,6 +45,7 @@
     <link rel="stylesheet" href="css/inlineToExternal.css">
     <!--custom css-->
     <link rel="stylesheet" href="css/myStyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="home page-template-default page page-id-51 wp-embed-responsive no-sidebar">
@@ -122,7 +88,7 @@
             <div class="ideal-magazine-bottom-header" style="min-height: 55px;">
                 <div class="ideal-magazine-navigation">
                     <div class="section-wrapper"> 
-                        <div class="ideal-magazine-navigation-container">
+                        <div class="ideal-magazine-navigation-container ">
                             <nav id="site-navigation" class="main-navigation">
                                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                                     <span class="ham-icon"></span>
@@ -132,9 +98,10 @@
                                 <div class="navigation-area">
                                     <div class="menu-primary-menu-container">
                                         <ul id="primary-menu" class="menu">
-                                            <li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-51 current_page_item menu-item-55"><a href="" aria-current="page">Reload page</a></li>
                                             <li id="create-new-post" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newPostModal">Make new post</button></li>
-                                            
+                                            <li id="create-new-post" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">Login</button></li>
+                                            <li id="create-new-post" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register">Register</button></li>
+                                            <li id="create-new-post" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Logout" onClick="window.location.reload();">Logout</button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -146,22 +113,91 @@
             
         </header><!-- #masthead -->
         <!-- Modal -->
-        <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+        <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModal" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="newPostModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="newPostModal">New Artical</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        
+                    <form id="addArticleForm">
+                        <div class="mb-3">
+                            <label for="articleTitle" class="form-label">Title</label>
+                            <input type="text" class="" id="articleTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="articleUrl" class="form-label">URL</label>
+                            <input type="url" class="" id="articleUrl" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="articleImage" class="form-label">Image URL</label>
+                            <input type="url" class="" id="articleImage">
+                        </div>
+                        <div class="mb-3">
+                            <label for="articleDescription" class="form-label">Short Description</label>
+                            <textarea class="form-control" id="articleDescription" required></textarea>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="submitArticle">Make Post</button>
+                        </div> 
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Make Post</button>
-                </form>
+                
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="login">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body">
+                    <form id="login">
+                        <label for="fname">Username:</label><br>
+                        <input type="text" id="username" name="username" value="Username"><br>
+                        <label for="lname">Password:</label><br>
+                        <input type="text" id="password" name="password" value="Password"><br><br>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form> 
+                </div>
+                
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="register">register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="register">
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id="fName" name="fName" placeholder="First Name"><br>
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lName" name="lName" placeholder="Last Name"><br>
+                        <label for="rusername">New Username:</label><br>
+                        <input type="text" id="rusername" name="rpassword" placeholder="Username"><br>
+                        <label for="rpassword">New Password:</label><br>
+                        <input type="text" id="rpassword" name="rpassword" placeholder="Password"><br><br>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form> 
+                </div>
+                
             </div>
             </div>
         </div>
@@ -177,69 +213,13 @@
                                 <div class="main-wrap">
                                     <div class="slider-post-wrapper">
                                         <div class="slider-post-style">
+                                            
+                                            <!--sliding element
                                             <div class="blog-post-container tile-layout">
                                                 <div class="blog-post-inner ">
                                                     <div class="blog-post-image">
-                                                        <a href=""><img src="images/cat_tweaking.jpg"></a>                                                    </div>
-                                                    <div class="blog-post-detail">
-                                                        <div class="post-categories">
-                                                        </div>
-                                                        <h2 class="entry-title">
-                                                            <a
-                                                                href="https://iki-bir.com/5-astuces-look-chic-sans-depenser-une-fortune/">5
-                                                                astuces pour un look chic sans dépenser une fortune</a>
-                                                        </h2>
-                                                        <div class="post-meta">
-                                                            <span class="post-date"><a
-                                                                href=""><time
-                                                                    class="entry-date published"
-                                                                    datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                    datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                            </span>
-                                                        </div>
-                                                        <p class="post-excerpt">
-                                                            Avoir du style sans vider son compte bancaire, c'est
-                                                            possible. Pas besoin d'une garde-robe hors de prix pour être
-                                                            élégant(e) et sophistiqué(e). Avec un peu de stratégie et
-                                                            beaucoup de créativité, vous pouvez afficher un look chic
-                                                            sans dépasser votre… </p>
+                                                        <a href=""></a>                                                    
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="blog-post-container tile-layout">
-                                                <div class="blog-post-inner ">
-                                                    <div class="blog-post-image">
-                                                        <a href=""><img src="images/peanutbuttercat.jpg"></a>                                                    </div>
-                                                    <div class="blog-post-detail">
-                                                        <div class="post-categories">
-                                                        </div>
-                                                        <h2 class="entry-title">
-                                                            <a
-                                                                href="https://iki-bir.com/budget-vacances-profiter-sans-exploser-compte/">Budget
-                                                                vacances : comment profiter sans exploser votre
-                                                                compte</a>
-                                                        </h2>
-                                                        <div class="post-meta">
-                                                            <span class="post-date"><a
-                                                                href=""><time
-                                                                    class="entry-date published"
-                                                                    datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                    datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                            </span>
-                                                        </div>
-                                                        <p class="post-excerpt">
-                                                            Passer des vacances de rêve sans faire exploser son compte
-                                                            bancaire ? Oui, c’est possible ! Avec un peu de préparation,
-                                                            quelques astuces, et une pincée de bon sens, vous pouvez
-                                                            vous offrir une parenthèse enchantée sans finir à
-                                                            découvert.… </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="blog-post-container tile-layout">
-                                                <div class="blog-post-inner ">
-                                                    <div class="blog-post-image">
-                                                        <a href=""></a>                                                    </div>
                                                     <div class="blog-post-detail">
                                                         <div class="post-categories">
                                                         </div>
@@ -266,318 +246,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            -->
                                         </div>
 
-                                        <!--attachment photos-->
-                                        <div class="slider-post-nav">
-                                            <div class="nav-image">
-                                                <img width="1000" height="571"
-                                                    src=""
-                                                    id="attachment-image-top"
-                                                    class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-                                                    alt="mode et look chic ; 5 astuces pour ne pas payer trop cher"
-                                                    decoding="async"
-                                                    srcset="https://iki-bir.com/wp-content/uploads/2024/12/mode-et-look-chic.webp 1000w, https://iki-bir.com/wp-content/uploads/2024/12/mode-et-look-chic-300x171.webp 300w, https://iki-bir.com/wp-content/uploads/2024/12/mode-et-look-chic-768x439.webp 768w"
-                                                    sizes="(max-width: 1000px) 100vw, 1000px" />
-                                            </div>
-                                            <div class="nav-image">
-                                                <img width="1000" height="571"
-                                                    src=""
-                                                    id="attachment-image-middle"
-                                                    class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-                                                    alt="profiter de ses vacances sans exploser le budget"
-                                                    decoding="async"
-                                                    srcset="https://iki-bir.com/wp-content/uploads/2024/12/budget-vacances.webp 1000w, https://iki-bir.com/wp-content/uploads/2024/12/budget-vacances-300x171.webp 300w, https://iki-bir.com/wp-content/uploads/2024/12/budget-vacances-768x439.webp 768w"
-                                                    sizes="(max-width: 1000px) 100vw, 1000px" />
-                                            </div>
-                                            <div class="nav-image">
-                                                <img width="1000" height="666"
-                                                    src=""
-                                                    id="attachment-image-bottom"
-                                                    class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-                                                    alt="énergies renouvelables: les mythes et les réalités"
-                                                    decoding="async"
-                                                    srcset="https://iki-bir.com/wp-content/uploads/2024/12/energies-renouvelables.webp 1000w, https://iki-bir.com/wp-content/uploads/2024/12/energies-renouvelables-300x200.webp 300w, https://iki-bir.com/wp-content/uploads/2024/12/energies-renouvelables-768x511.webp 768w"
-                                                    sizes="(max-width: 1000px) 100vw, 1000px" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </section>
-                            
-                            <!--links images-->
-                            <section id="ideal_magazine_grid_posts_widget-1"
-                                class="widget grid-posts ascendoor-widget style-2">
-                                <div class="main-wrap">
-                                    <div class="title-heading">
-                                        <h3 class="widget-title"><span>Section 1</span></h3> <span
-                                            class="title-dash"></span>
-                                    </div>
-                                    <div class="grid-posts-wrapper">
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="images/peanutbuttercat.jpg"></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/place-reseaux-sociaux-relations-pour-ou-contre/">La
-                                                            place des réseaux sociaux dans nos relations : pour ou
-                                                            contre ?</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                                href=""><time
-                                                                    class="entry-date published"
-                                                                    datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                    datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Les réseaux sociaux ont transformé notre manière de communiquer.
-                                                        En quelques années, ces plateformes sont devenues des espaces
-                                                        incontournables pour échanger, partager et tisser des… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/eviter-conflits-financiers-achat-immobilier-en-couple/">7
-                                                            conseils pour éviter les conflits financiers lors d&rsquo;un
-                                                            achat immobilier en couple</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Acheter un bien à deux est une étape importante. C'est un projet
-                                                        qui symbolise l'engagement et la construction d'un avenir
-                                                        commun. Pourtant, les questions financières… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/teletravail-5-astuces-rester-productif/">Télétravail
-                                                            : 5 astuces imparables pour rester productif à la maison</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/batman-escape-plus-grand-escape-game-paris/">Batman
-                                                            Escape, le plus grand Escape Game à Paris</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            
-                            
-                            <!--images to the left side main content-->
-                            <section id="ideal_magazine_list_posts_widget-1"
-                                class="widget list-post ascendoor-widget style-1">
-                                <div class="main-wrap">
-                                    <div class="title-heading">
-                                        <h3 class="widget-title"><span>Section 2</span></h3> <span
-                                            class="title-dash"></span>
-                                    </div>
-                                    <div class="list-post-wrapper">
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/sublimer-plats-avec-herbes-fraiches/">Comment
-                                                            sublimer vos plats avec des herbes fraîches</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Les herbes fraîches sont des alliées incontournables pour
-                                                        transformer un plat ordinaire en une véritable expérience
-                                                        culinaire. Leur parfum, leur… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/recette-express-brownies-au-chocolat-20-minutes/">Recette
-                                                            express : brownies au chocolat prêts en 20 minutes</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Quand l'envie de chocolat frappe, on n’a pas toujours le temps
-                                                        de passer des heures en cuisine. Heureusement, il existe… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/batch-cooking-preparer-repas-semaine-2-heures/">Batch
-                                                            cooking : préparer vos repas pour toute la semaine en 2
-                                                            heures</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Préparer ses repas à l’avance est devenu une solution prisée
-                                                        pour gagner du temps, manger équilibré et réduire le gaspillage…
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a href="">Cuisine
-                                                            du monde : découvrez le goût unique du dahl indien</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Le dahl, ce plat emblématique de l’Inde, est riche en saveurs,
-                                                        réconfortant et nutritif. Il illustre parfaitement la diversité
-                                                        culinaire… </p>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -587,223 +258,23 @@
                                 class="widget grid-posts ascendoor-widget style-2">
                                 <div class="main-wrap">
                                     <div class="title-heading">
-                                        <h3 class="widget-title"><span>Section 3</span></h3> <span
+                                        <h3 class="widget-title"><span>Articles</span></h3> <span
                                             class="title-dash"></span>
                                     </div>
+
                                     <div class="grid-posts-wrapper">
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="images/peanutbuttercat.jpg"></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/nouvelle-adresse-a-jour-zone-telechargement/">Zone
-                                                            Téléchargement: nouvelle adresse à jour du site en février
-                                                            2025</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Zone Téléchargement, site emblématique du téléchargement direct
-                                                        en France, est à nouveau au cœur de l'actualité en 2025. Entre
-                                                        blocages juridiques, changements fréquents d’URL, et… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/place-reseaux-sociaux-relations-pour-ou-contre/">La
-                                                            place des réseaux sociaux dans nos relations : pour ou
-                                                            contre ?</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Les réseaux sociaux ont transformé notre manière de communiquer.
-                                                        En quelques années, ces plateformes sont devenues des espaces
-                                                        incontournables pour échanger, partager et tisser des… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a href="">3
-                                                            livres incontournables pour changer votre vision du
-                                                            monde</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container grid-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/musique-therapie-quels-bienfaits-mental/">La
-                                                            musique comme thérapie : quels bienfaits pour le mental
-                                                            ?</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </section>
                         
                         </div>
+                        
                         <!--left aside-->
                         <div class="secondary-widgets-area">
-                            <section id="ideal_magazine_list_posts_widget-2"
-                                class="widget list-post ascendoor-widget style-1">
-                                <div class="main-wrap">
-                                    <div class="title-heading">
-                                        <h3 class="widget-title"><span>Immobilier et Bâtiment</span></h3> <span
-                                            class="title-dash"></span>
-                                    </div>
-                                    <div class="list-post-wrapper">
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/eviter-conflits-financiers-achat-immobilier-en-couple/">7
-                                                            conseils pour éviter les conflits financiers lors d&rsquo;un
-                                                            achat immobilier en couple</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Acheter un bien à deux est une étape importante. C'est un projet
-                                                        qui symbolise l'engagement et la construction d'un avenir… </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a
-                                                            href="https://iki-bir.com/acheter-ou-louer-choisir-situation-financiere/">Acheter
-                                                            ou louer : que choisir selon votre situation financière
-                                                            ?</a>
-                                                    </h2>
-                                                    <div class="post-meta">
-                                                        <span class="post-date"><a
-                                                            href=""><time
-                                                                class="entry-date published"
-                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
-                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
-                                                    </div>
-                                                    <p class="post-excerpt">
-                                                        Acheter ou louer ? Cette question cruciale taraude bon nombre de
-                                                        ménages. Si l’idée d’être propriétaire fait rêver, la location…
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
                             <section id="ideal_magazine_grid_posts_widget-3"
                                 class="widget grid-posts ascendoor-widget style-2">
                                 <div class="main-wrap">
-                                    <div class="title-heading">
-                                        <h3 class="widget-title"><span>Finances</span></h3> <span
-                                            class="title-dash"></span>
-                                    </div>
                                     <div class="grid-posts-wrapper">
                                         <div class="blog-post-container grid-layout">
                                             <div class="blog-post-inner ">
@@ -881,7 +352,7 @@
                                 class="widget thumbnail-list-post ascendoor-widget style-1">
                                 <div class="main-wrap">
                                     <div class="title-heading">
-                                        <h3 class="widget-title"><span>Ads</span></h3> <span
+                                        <h3 class="widget-title"><span></span>Ads</h3> <span
                                             class="title-dash"></span>
                                     </div>
                                     <div class="thumbnail-list-post-wrapper">
@@ -905,11 +376,7 @@
                                                                 datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
                                                                 datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
                                                         </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -934,11 +401,6 @@
                                                                 datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
                                                                 datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
                                                         </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -961,11 +423,6 @@
                                                                 class="entry-date published"
                                                                 datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
                                                                 datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
-                                                        </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -990,18 +447,14 @@
                                                                 datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
                                                                 datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
                                                         </span>
-                                                        <span class="post-icons">
-                                                            <button type="button" class="btn btn-light like-post-btn"><img src="images/thumbs-up-icon.png" alt="like button"></button>
-                                                            <button type="button" class="btn btn-light comment-post-btn"><img src="images/comment-icon.png" alt="comment button"></button>
-                                                            <button type="button" class="btn btn-light delete-post-btn"><img src="images/trash-bin-icon.png" alt="trash bin"></button>
-                                                        </span>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </section> 
+                            </section>
                         </div>
                     </div>
                 </div>

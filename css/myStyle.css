@@ -2,3 +2,27 @@
     height: 16px;
     width: 16px;
 }
+.entry-title{
+    color: black;
+}
+.post-comments{
+    border-top: 2px dashed black;
+}
+.post-buttons{
+    border-top: 2px dashed black;
+    padding: 2px;
+    text-align: center;
+}
+.btn{    
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.comment{
+    color: black;
+    font-size: 12px;
+    border-top: 1px dashed black;
+}
+.blog-post{
+    border: 1px solid black;
+    padding: 2px;
+}
