@@ -26,3 +26,18 @@
     border: 1px solid black;
     padding: 2px;
 }
+
+.col{
+    text-align: center;
+}
+
+.menu-item button{
+    background-color: black;
+    border-color: black;
+    width: 99%;
+}
+
+.main-navigation{
+    background-color: black;
+    border-radius: 5px;
+}
