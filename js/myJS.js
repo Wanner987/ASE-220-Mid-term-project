@@ -2,7 +2,6 @@ let data = { "articles": [], "users": []};
 const jsonBlobUrl = "https://jsonblob.com/api/1346852405614141440"; 
 var user = null;
 
-
 function loadArticles(contentLocation) {
     $(contentLocation).empty();
 
@@ -223,16 +222,16 @@ function findMostLikedArticle(){
     data.articles.forEach(article => {
         if (article.likes > mostLikes) {
             mostLikes = article.likes;
-            mostLikedArticle = article.title;
+            mostLikedArticle = article.id;
         }
     });
 
-    console.log("Most liked article: " + mostLikedArticle);
-    console.log("Number of likes: " + mostLikes);
+    
 }
 
 $(document).ready(function() {
     loadData('#main-scrolling-content');
     $('.login-button').on('click', () => $('#login').modal('show'));
+    findMostLikedArticle();
 });
 
