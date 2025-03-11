@@ -82,7 +82,7 @@ function updateJSONBlob() {
         console.error('Error updating data:', error);
       }
     });
-  }
+}
 
 
 $("#submitArticle").click(function () {
@@ -112,8 +112,6 @@ $("#submitArticle").click(function () {
     $("#addArticleForm")[0].reset();
 });
 
-
-
 function updateLikeCount(articleId) {
     const article = data.articles.find(a => a.id === articleId);
     if (article) {
@@ -129,6 +127,7 @@ $(document).on('click', '.likeButton', function() {
         article.likes++;
         $(this).siblings('.post-meta').find('.likeCount span').text(article.likes);
         updateJSONBlob();
+        findMostLikedArticle()
     }
 });
 
@@ -143,6 +142,7 @@ $(document).on('click', '.comment-post-btn', function() {
             article.comments.push(commentText);
             $(this).siblings('.post-comments').find('ul').append(`<li>${commentText}</li>`);
             updateJSONBlob();
+            loadData('#main-scrolling-content');
             commentInput.val('');
         }
     }
@@ -217,15 +217,43 @@ $("#login").submit(function (event) {
 
 function findMostLikedArticle(){
     var mostLikes = 0;
-    var mostLikedArticle = '';
+    let articlesHtml = ``;
+    $("#right-aside-content").empty();
+    
 
-    data.articles.forEach(article => {
-        if (article.likes > mostLikes) {
-            mostLikes = article.likes;
-            mostLikedArticle = article.id;
-        }
+    const topArticles = data.articles
+        .sort((a, b) => b.likes - a.likes)
+        .slice(0, 3);
+    
+    topArticles.forEach(article => {
+        articlesHtml += `
+        <div class="blog-post-container grid-layout">
+            <div class="blog-post-inner blog-post" data-id="${article.id}">
+                <div class="blog-post-image">
+                    <a href="#"><img src="${article.image}"></a>                                                
+                </div>
+                <div class="blog-post-detail">
+                    <h2 class="entry-title">
+                        <a href="${article.url}" target="_blank">${article.title}</a>
+                    </h2>
+                    <div class="post-meta">
+                        <p>${article.short_description}</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul>
+                            <li class="entry-date published likeCount">Likes: <span>${article.likes}</span></li>
+                            <li class="entry-date published">Posted Date: ${article.created}</li>
+                            <li class="entry-date published">Posted by: ${article.created_by}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  `;
     });
+  $("#right-aside-content").append(articlesHtml);
 
+    
     
 }
 
