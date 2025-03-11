@@ -227,17 +227,22 @@ $(document).on('click', '.likeButton', function() {
 });
 
 $(document).on('click', '.comment-post-btn', function() {
-    const articleId = $(this).closest('.blog-post').data('id');
-    const commentInput = $(this).siblings('.commentInput');
-    const commentText = commentInput.val().trim();
+    const articleId = $(this).closest('.blog-post-container').find('.blog-post').data('id');  
+    console.log("Article ID:", articleId);
+
+    let commentInput = $(this).closest('.blog-post-detail').find('.commentInput');  
+    console.log("Comment Input:", commentInput);
+
+    const commentText = commentInput.val().trim();  
 
     if (commentText) {
-        const article = data.articles.find(a => a.id === articleId);
+        let article = data.articles.find(a => a.id == articleId);  
         if (article) {
             article.comments.push(commentText);
-            $(this).siblings('.post-comments').find('ul').append(`<li>${commentText}</li>`);
+
+            $(this).closest('.blog-post-detail').find('.post-comments ul').append(`<li class="comment">${commentText}</li>`);
+
             updateJSONBlob();
-            loadData('#main-scrolling-content');
             commentInput.val('');
         }
     }
