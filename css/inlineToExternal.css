@@ -575,10 +575,16 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 	text-decoration: none;
 	font-size: small;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h6 {
     clear: both;
     font-family: "Commissioner", serif;
     color: rgb(255, 255, 255);
+}
+h5{
+    clear: both;
+    font-family: "Commissioner", serif;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
     color: rgb(0, 0, 0);
