@@ -32,3 +32,21 @@
 .likeButton{
     background-color: rgb(0, 138, 9);
 }
+nav{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+.menu-primary-menu-container{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+.nav-button{
+    width: 100%;
+}
+.hidden {
+    display: none !important;
+}

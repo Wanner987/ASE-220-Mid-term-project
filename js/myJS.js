@@ -87,7 +87,9 @@ function updateJSONBlob() {
     });
 }
 
-//Nav Bar buttons/forms
+/*
+Nav/Forms elements 
+*/
 
 //generates a random ID for the Articles
 function generateRandomID() {
@@ -151,8 +153,8 @@ $("#login").submit(function (event) {
         currentUser = user;
         alert(`Welcome, ${user.firstName}!`);
         $("#login").modal("hide");
-        $("#Logout").show();
-        $("#loginButton").hide();
+        $("#Logout").removeClass('hidden');
+        $("#loginButton").addClass('hidden');
     } else {
         user = null;
         alert("Invalid credentials! Try again.");
@@ -162,8 +164,8 @@ $("#login").submit(function (event) {
 $("#Logout").click(function () {
     alert("You have been Logged out");
     user = null;
-    $("#Logout").hide();
-    $("#loginButton").show();
+    $("#Logout").addClass('hidden');
+    $("#loginButton").removeClass('hidden');
 });
 
 
@@ -265,5 +267,5 @@ $(document).ready(function() {
     loadData('#main-scrolling-content');
     $('.login-button').on('click', () => $('#login').modal('show'));
     findMostLikedArticle();
-    $("#Logout").hide();
+    $("#Logout").addClass('hidden');
 });
