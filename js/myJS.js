@@ -1,10 +1,10 @@
 let data = { "articles": [], "users": []};
 const jsonBlobUrl = "https://jsonblob.com/api/1346852405614141440"; 
+var user = null;
 
 
-
-function loadArticles() {
-    $('.grid-posts-wrapper').empty();
+function loadArticles(contentLocation) {
+    $(contentLocation).empty();
 
     data.articles.forEach(function(article) {
       const articleHtml = `
@@ -50,18 +50,19 @@ function loadArticles() {
                 </div>
             </div>
       `;
-      $('.grid-posts-wrapper').append(articleHtml);
+      $(contentLocation).append(articleHtml);
     });
 }
 
 //grabs Data from JSON
-function loadData() {
+function loadData(contentLocation) {
     $.ajax({
         url: jsonBlobUrl,
         type: 'GET',
         success: function(response) {
         data = response;
-        loadArticles();
+        loadArticles(contentLocation);
+        findMostLikedArticle();
         },
         error: function(xhr, status, error) {
         console.error('Error loading data:', error);
@@ -105,7 +106,7 @@ $("#submitArticle").click(function () {
 
     data.articles.push(newArticle);
     updateJSONBlob();
-    loadArticles();
+    loadData('#main-scrolling-content');
     alert("Article added successfully!");
 
     $("#newPostModal").modal("hide");
@@ -165,7 +166,7 @@ $(document).on("click", ".delete-post-btn", function () {
 
     data.articles = data.articles.filter(a => a.id !== articleId);
     updateJSONBlob();
-    loadArticles();
+    loadData('#main-scrolling-content');
 });
 
 
@@ -215,8 +216,23 @@ $("#login").submit(function (event) {
     }
 });
 
+function findMostLikedArticle(){
+    var mostLikes = 0;
+    var mostLikedArticle = '';
+
+    data.articles.forEach(article => {
+        if (article.likes > mostLikes) {
+            mostLikes = article.likes;
+            mostLikedArticle = article.title;
+        }
+    });
+
+    console.log("Most liked article: " + mostLikedArticle);
+    console.log("Number of likes: " + mostLikes);
+}
 
 $(document).ready(function() {
-    loadData();
+    loadData('#main-scrolling-content');
     $('.login-button').on('click', () => $('#login').modal('show'));
 });
+
