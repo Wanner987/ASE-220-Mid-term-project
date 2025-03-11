@@ -563,14 +563,14 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 }
 .blog-post-container .blog-post-inner .blog-post-detail .entry-title a,
 .blog-post-container .blog-post-inner .blog-post-detail .post-main-title a {
-	color: black;
+	color: rgb(255, 255, 255);
 	font-family: "Commissioner", serif;
     font-size: large;
 	text-decoration: none;
 }
 .blog-post-container .blog-post-inner .blog-post-detail .post-meta .post-date li {
 	position: relative;
-	color: black;
+	color: rgb(255, 255, 255);
     font-family: "Commissioner", serif;
 	text-decoration: none;
 	font-size: small;
@@ -578,7 +578,7 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 h1, h2, h3, h4, h5, h6 {
     clear: both;
     font-family: "Commissioner", serif;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
     color: rgb(0, 0, 0);
@@ -588,7 +588,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     width: 100%;
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus, input[type="url"]:focus, input[type="password"]:focus{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border: 1px solid #ccc;
