@@ -26,3 +26,9 @@
     border: 1px solid black;
     padding: 2px;
 }
+.delete-post-btn{
+    background-color: red;
+}
+.likeButton{
+    background-color: rgb(0, 138, 9);
+}

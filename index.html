@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -88,7 +89,7 @@
             <div class="ideal-magazine-bottom-header" style="min-height: 55px;">
                 <div class="ideal-magazine-navigation">
                     <div class="section-wrapper"> 
-                        <div class="ideal-magazine-navigation-container ">
+                        <div class="ideal-magazine-navigation-container">
                             <nav id="site-navigation" class="main-navigation">
                                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                                     <span class="ham-icon"></span>
@@ -99,9 +100,9 @@
                                     <div class="menu-primary-menu-container">
                                         <ul id="primary-menu" class="menu">
                                             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newPostModal">Make new post</button></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">Login</button></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register">Register</button></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Logout" onClick="window.location.reload();">Logout</button></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register" >Register</button></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login" id="loginButton">Login</button></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Logout" id="Logout">Logout</button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -124,19 +125,19 @@
                     <form id="addArticleForm">
                         <div class="mb-3">
                             <label for="articleTitle" class="form-label">Title</label>
-                            <input type="text" class="" id="articleTitle" required>
+                            <input type="text" class="" id="articleTitle" placeholder="Title" required>
                         </div>
                         <div class="mb-3">
                             <label for="articleUrl" class="form-label">URL</label>
-                            <input type="url" class="" id="articleUrl" required>
+                            <input type="url" class="" id="articleUrl" placeholder="https://exampleURL" required>
                         </div>
                         <div class="mb-3">
                             <label for="articleImage" class="form-label">Image URL</label>
-                            <input type="url" class="" id="articleImage">
+                            <input type="url" class="" id="articleImage" placeholder="https://exampleImageURL">
                         </div>
                         <div class="mb-3">
                             <label for="articleDescription" class="form-label">Short Description</label>
-                            <textarea class="form-control" id="articleDescription" required></textarea>
+                            <textarea class="form-control" id="articleDescription" placeholder="Short Description" required></textarea>
                             
                         </div>
                         <div class="modal-footer">
@@ -160,9 +161,9 @@
                 <div class="modal-body">
                     <form id="login">
                         <label for="fname">Username:</label><br>
-                        <input type="text" id="username" name="username" value="Username"><br>
+                        <input type="text" id="username" name="username" placeholder="Username"><br>
                         <label for="lname">Password:</label><br>
-                        <input type="text" id="password" name="password" value="Password"><br><br>
+                        <input type="text" id="password" name="password" placeholder="Password"><br><br>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Login</button>
@@ -326,7 +327,8 @@
                                         <div class="blog-post-container list-layout">
                                             <div class="blog-post-inner ">
                                                 <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
+                                                    <a href=""><img src="" alt=""></a>                                                
+                                                </div>
                                                 <div class="blog-post-detail">
                                                     <div class="post-categories">
                                                     </div>
@@ -350,7 +352,8 @@
                                         <div class="blog-post-container list-layout">
                                             <div class="blog-post-inner ">
                                                 <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
+                                                    <a href=""><img src="" alt=""></a>                                                
+                                                </div>
                                                 <div class="blog-post-detail">
                                                     <div class="post-categories">
                                                     </div>
