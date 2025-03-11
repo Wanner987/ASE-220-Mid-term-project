@@ -153,8 +153,8 @@ $("#login").submit(function (event) {
         currentUser = user;
         alert(`Welcome, ${user.firstName}!`);
         $("#login").modal("hide");
-        $("#Logout").removeClass('hidden');
-        $("#loginButton").addClass('hidden');
+        $(".logoutDiv").removeClass('hidden');
+        $(".loginDiv").addClass('hidden');
     } else {
         user = null;
         alert("Invalid credentials! Try again.");
@@ -164,8 +164,8 @@ $("#login").submit(function (event) {
 $("#Logout").click(function () {
     alert("You have been Logged out");
     user = null;
-    $("#Logout").addClass('hidden');
-    $("#loginButton").removeClass('hidden');
+    $(".logoutDiv").addClass('hidden');
+    $(".loginDiv").removeClass('hidden');
 });
 
 
@@ -267,5 +267,5 @@ $(document).ready(function() {
     loadData('#main-scrolling-content');
     $('.login-button').on('click', () => $('#login').modal('show'));
     findMostLikedArticle();
-    $("#Logout").addClass('hidden');
+    $(".logoutDiv").addClass('hidden');
 });
