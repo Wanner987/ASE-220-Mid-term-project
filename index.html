@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -84,10 +85,12 @@
                     </div>
                 </div>
             </div>
+            
             <!-- end of site-branding -->
             <div class="ideal-magazine-bottom-header" style="min-height: 55px;">
                 <div class="ideal-magazine-navigation">
                     <div class="section-wrapper"> 
+                        <div class="ideal-magazine-navigation-container">
                             <nav id="site-navigation" class="main-navigation">
                                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                                     <span class="ham-icon"></span>
@@ -96,17 +99,16 @@
                                 </button>
                                 <div class="navigation-area">
                                     <div class="menu-primary-menu-container">
-                                        <div class="container menu" id="primary-menu">
-                                            <div class="row">
-                                                <div class="col menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newPostModal">Make new post</button></div>
-                                                <div class="col menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">Login</button></div>
-                                                <div class="col menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register">Register</button></div>
-                                                <div class="col menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Logout" onClick="window.location.reload();">Logout</button></div>
-                                            </div>
-                                        </div>
+                                        <ul id="primary-menu" class="menu">
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59 nav-button"><button type="button" class="btn btn-primary nav-button" data-bs-toggle="modal" data-bs-target="#newPostModal">Make new post</button></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59 nav-button"><button type="button" class="btn btn-primary nav-button" data-bs-toggle="modal" data-bs-target="#register" >Register</button></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59 nav-button"><button type="button" class="btn btn-primary nav-button" data-bs-toggle="modal" data-bs-target="#login" id="loginButton">Login</button></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59 nav-button"><button type="button" class="btn btn-primary nav-button" data-bs-toggle="modal" data-bs-target="#Logout" id="Logout">Logout</button></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </nav><!-- #site-navigation -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,19 +126,19 @@
                     <form id="addArticleForm">
                         <div class="mb-3">
                             <label for="articleTitle" class="form-label">Title</label>
-                            <input type="text" class="" id="articleTitle" required>
+                            <input type="text" class="" id="articleTitle" placeholder="Title" required>
                         </div>
                         <div class="mb-3">
                             <label for="articleUrl" class="form-label">URL</label>
-                            <input type="url" class="" id="articleUrl" required>
+                            <input type="url" class="" id="articleUrl" placeholder="https://exampleURL" required>
                         </div>
                         <div class="mb-3">
                             <label for="articleImage" class="form-label">Image URL</label>
-                            <input type="url" class="" id="articleImage">
+                            <input type="url" class="" id="articleImage" placeholder="https://exampleImageURL">
                         </div>
                         <div class="mb-3">
                             <label for="articleDescription" class="form-label">Short Description</label>
-                            <textarea class="form-control" id="articleDescription" required></textarea>
+                            <textarea class="form-control" id="articleDescription" placeholder="Short Description" required></textarea>
                             
                         </div>
                         <div class="modal-footer">
@@ -160,9 +162,9 @@
                 <div class="modal-body">
                     <form id="login">
                         <label for="fname">Username:</label><br>
-                        <input type="text" id="username" name="username" value="Username"><br>
+                        <input type="text" id="username" name="username" placeholder="Username"><br>
                         <label for="lname">Password:</label><br>
-                        <input type="text" id="password" name="password" value="Password"><br><br>
+                        <input type="text" id="password" name="password" placeholder="Password"><br><br>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Login</button>
@@ -276,8 +278,8 @@
                                 class="widget grid-posts ascendoor-widget style-2">
                                 <div class="main-wrap">
                                     <div class="title-heading">
-                                        <h3 class="widget-title"><span>Most Liked Article</span></h3> <span
-                                            class="title-dash"></span>
+                                        <h3 class="widget-title"><span>Top three Liked Articles</span></h3> 
+                                        <span class="title-dash"></span>
                                     </div>
                                     
                                     <div class="grid-posts-wrapper" id="right-aside-content">
@@ -294,7 +296,7 @@
                                 class="widget thumbnail-list-post ascendoor-widget style-1">
                                 <div class="main-wrap">
                                     <div class="title-heading">
-                                        <h3 class="widget-title"><span></span>Sponsors</h3> <span
+                                        <h3 class="widget-title"><span></span>Ads</h3> <span
                                             class="title-dash"></span>
                                     </div>
                                     <div class="thumbnail-list-post-wrapper">
@@ -306,11 +308,69 @@
                                                     <div class="post-categories">
                                                     </div>
                                                     <h2 class="entry-title">
-                                                        <a href="https://iki-bir.com/strategies-animaux-changement-climatique/">
-                                                            This cat (Hes tweaking out)
-                                                        </a>
+                                                        <a
+                                                            href="https://iki-bir.com/strategies-animaux-changement-climatique/">Les
+                                                            stratégies des animaux face au changement climatique : que
+                                                            pouvons-nous apprendre ?</a>
                                                     </h2>
-                                                    
+                                                    <div class="post-meta">
+                                                        <span class="post-date"><a
+                                                            href=""><time
+                                                                class="entry-date published"
+                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
+                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
+                                                        </span>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blog-post-container list-layout">
+                                            <div class="blog-post-inner ">
+                                                <div class="blog-post-image">
+                                                    <a href=""><img src="" alt=""></a>                                                
+                                                </div>
+                                                <div class="blog-post-detail">
+                                                    <div class="post-categories">
+                                                    </div>
+                                                    <h2 class="entry-title">
+                                                        <a
+                                                            href="https://iki-bir.com/aliments-exotiques-impact-environnemental/">Les
+                                                            aliments exotiques : quel est leur impact environnemental
+                                                            ?</a>
+                                                    </h2>
+                                                    <div class="post-meta">
+                                                        <span class="post-date"><a
+                                                            href=""><time
+                                                                class="entry-date published"
+                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
+                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blog-post-container list-layout">
+                                            <div class="blog-post-inner ">
+                                                <div class="blog-post-image">
+                                                    <a href=""><img src="" alt=""></a>                                                
+                                                </div>
+                                                <div class="blog-post-detail">
+                                                    <div class="post-categories">
+                                                    </div>
+                                                    <h2 class="entry-title">
+                                                        <a
+                                                            href="https://iki-bir.com/energies-renouvelables-mythes-realites/">Les
+                                                            énergies renouvelables : mythes et réalités</a>
+                                                    </h2>
+                                                    <div class="post-meta">
+                                                        <span class="post-date"><a
+                                                            href=""><time
+                                                                class="entry-date published"
+                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
+                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -322,42 +382,19 @@
                                                     <div class="post-categories">
                                                     </div>
                                                     <h2 class="entry-title">
-                                                        <a href="https://iki-bir.com/aliments-exotiques-impact-environnemental/">
-                                                            Text
-                                                        </a>
+                                                        <a
+                                                            href="https://iki-bir.com/faire-compost-a-la-maison-guide-debutants/">Comment
+                                                            faire son compost à la maison : guide pour débutants</a>
                                                     </h2>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
+                                                    <div class="post-meta">
+                                                        <span class="post-date"><a
+                                                            href=""><time
+                                                                class="entry-date published"
+                                                                datetime="2025-02-15T16:27:35+00:00">month day, year</time><time class="updated"
+                                                                datetime="2025-02-15T16:27:36+00:00">month day, year</time></a>
+                                                        </span>
+
                                                     </div>
-                                                    <h2 class="entry-title">
-                                                        <a href="https://iki-bir.com/aliments-exotiques-impact-environnemental/">
-                                                            Text
-                                                        </a>
-                                                    </h2>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-post-container list-layout">
-                                            <div class="blog-post-inner ">
-                                                <div class="blog-post-image">
-                                                    <a href=""><img src="" alt=""></a>                                                </div>
-                                                <div class="blog-post-detail">
-                                                    <div class="post-categories">
-                                                    </div>
-                                                    <h2 class="entry-title">
-                                                        <a href="https://iki-bir.com/aliments-exotiques-impact-environnemental/">
-                                                            Text
-                                                        </a>
-                                                    </h2>  
                                                 </div>
                                             </div>
                                         </div>
@@ -381,7 +418,7 @@
                         <div class="footer-container-wrapper">
                             <div class="footer-content-inside">
                                 <section id="block-7" class="widget widget_block">
-                                    <h2 class="wp-block-heading">Description of site</h2>
+                                    <h2 class="wp-block-heading">Iki-Bir.com</h2>
                                 </section>
                                 <section id="block-8" class="widget widget_block widget_text">
                                     <p>Iki-bir.com est un webzine francophone qui propose des articles variés sur des
@@ -399,7 +436,7 @@
                         <div class="footer-container-wrapper">
                             <div class="footer-content-inside">
                                 <section id="block-16" class="widget widget_block">
-                                    <h2 class="wp-block-heading">Other sites that are cool</h2>
+                                    <h2 class="wp-block-heading">Blogs partenaires</h2>
                                 </section>
                                 <section id="block-15" class="widget widget_block">
                                     <ul class="wp-block-list">
@@ -475,8 +512,8 @@
             <div class="ideal-magazine-bottom-footer">
                 <div class="section-wrapper">
                     <div class="bottom-footer-content">
-                        <p>Copyright &copy; 2025 <a href="">Stolen</a> | This site <a
-                                href="https://iguanemedia.com" target="_blank">Gigachad Media</a>. </p>
+                        <p>Copyright &copy; 2025 <a href="">Iki-bir.com</a> | Site web édité par <a
+                                href="https://iguanemedia.com" target="_blank">Iguane Media</a>. </p>
                     </div>
                 </div>
             </div>
